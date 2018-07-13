@@ -31,7 +31,8 @@ module.exports = function validateRegisterInput(data) {
 	}
 
 	if (!Validator.isLength(data.password, { min: 6, max: 30 })) {
-		errors.password = 'Password must be at least 6 characters';
+		errors.password =
+			'Password must be at least 6 characters and maximum 30 characters long';
 	}
 
 	if (Validator.isEmpty(data.password2)) {
